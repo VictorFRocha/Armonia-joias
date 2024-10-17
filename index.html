@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armonia Joias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="logo-header">
+        <img src="imagens/logo.jpg" alt="Logo Armonia Joias" class="logo-img">
+        <div class="logo-text">
+            <h1 class="armon">Armonia</h1>
+            <h2 class="joias">Joias</h2>
+        </div>
+    </header>
+
+    <!-- Centralizando o título da loja -->
+    <h1 class="titulo-principal">Bem-vindo à Armonia Joias</h1>
+
+    <!-- Container do login -->
+    <div class="login-container" id="login-container">
+        <h2>Login</h2>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" placeholder="Digite sua senha">
+        <button onclick="logar()">Entrar</button>
+        <p id="mensagem-erro" style="color: red;"></p>
+    </div>
+
+    <div class="loja" id="loja" style="display:none;">
+        <!-- Produto 1 -->
+        <div class="produto">
+            <img src="imagens/brincoestrela.jpg" alt="Brinco Ponto de Luz">
+            <h2>BRINCO PONTO DE LUZ</h2>
+            <p>Preço: R$ 59,90</p>
+            <button onclick="adicionarAoCarrinho('Brinco Ponto de Luz', 59.90)">Adicionar ao carrinho</button>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="produto">
+            <img src="imagens/piercingcoração.jpg" alt="Piercing Coração">
+            <h2>PIERCING CORAÇÃO</h2>
+            <p>Preço: R$ 48,90</p>
+            <button onclick="adicionarAoCarrinho('Piercing Coração', 48.90)">Adicionar ao carrinho</button>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="produto">
+            <img src="imagens/ColardaAmizade.jpg" alt="Colar da Amizade">
+            <h2>COLAR DA AMIZADE</h2>
+            <p>Preço: R$ 119,90</p>
+            <button onclick="adicionarAoCarrinho('Colar da Amizade', 119.90)">Adicionar ao carrinho</button>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="produto">
+            <img src="imagens/pulseiratrevo.jpg" alt="Pulseira Trevo">
+            <h2>PULSEIRA TREVO</h2>
+            <p>Preço: R$ 109,00</p>
+            <button onclick="adicionarAoCarrinho('Pulseira Trevo', 109.00)">Adicionar ao carrinho</button>
+        </div>
+
+        <!-- Produto 5 -->
+        <div class="produto">
+            <img src="imagens/brincocoraçao.jpg" alt="Brinco Coração">
+            <h2>BRINCO CORAÇÃO</h2>
+            <p>Preço: R$ 99,90</p>
+            <button onclick="adicionarAoCarrinho('Brinco Coração', 99.90)">Adicionar ao carrinho</button>
+        </div>
+
+        <!-- Produto 6 -->
+        <div class="produto">
+            <img src="imagens/pulseiracoraçao02.jpg" alt="Pulseira Coração 02">
+            <h2>PULSEIRA CORAÇÃO 02</h2>
+            <p>Preço: R$ 115,90</p>
+            <button onclick="adicionarAoCarrinho('Pulseira Coração 02', 115.90)">Adicionar ao carrinho</button>
+        </div>
+
+        <!-- Produto 7 -->
+        <div class="produto">
+            <img src="imagens/anelcoraçaocravejado.jpg" alt="Anel Coração Cravejado">
+            <h2>ANEL CORAÇÃO CRAVEJADO</h2>
+            <p>Preço: R$ 90,99</p>
+            <button onclick="adicionarAoCarrinho('Anel Coração Cravejado', 90.99)">Adicionar ao carrinho</button>
+        </div>
+
+        <!-- Produto 8 -->
+        <div class="produto">
+            <img src="imagens/tornozeleiraduplacoração.jpg" alt="Tornozeleira Dupla Coração">
+            <h2>TORNOZELEIRA DUPLA CORAÇÃO</h2>
+            <p>Preço: R$ 121,99</p>
+            <button onclick="adicionarAoCarrinho('Tornozeleira Dupla Coração', 121.99)">Adicionar ao carrinho</button>
+        </div>
+    </div>
+
+    <!-- Carrinho de Compras -->
+    <h2>Carrinho</h2>
+    <ul id="carrinho">
+        <p>Carrinho vazio.</p>
+    </ul>
+
+    <!-- Botão de Finalizar Compra -->
+    <button id="finalizar-compra" onclick="finalizarCompra()" style="display:none;">Finalizar Compra</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
